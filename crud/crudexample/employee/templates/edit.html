@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<title>Employee Records</title>
+</head>
+<body>
+	<center>
+		<h1>UPDATE RECORDS</h1>
+		<form action="/update/{{ employee.id }}" method="POST">
+			{% csrf_token %}
+			EMPLOYEE ID:<input type="text" name = 'eid' value="{{ employee.eid }}"><br>
+			EMPLOYEE NAME:<input type="text" name = "name" value="{{ employee.name }}"><br>
+			EMPLOYEE EMAIL:<input type="email"name = "email" value="{{ employee.email }}" ><br>
+			EMPLOYEE ADDRESS:<input type="text" name = "address" value="{{employee.address }}"><br>
+			EMPLOYEE CONTACT:<input type="text" name = "contact" value="{{ employee.contact }}"><br>
+			<input type="submit" value="UPDATE">
+		</form>
+	</center>
+</body>
+</html>
+
+
